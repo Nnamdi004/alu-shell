@@ -1,2 +1,2 @@
 #!/bin/bash
-while read line; do echo "$line" | cut -c1; done
+cut -c1
