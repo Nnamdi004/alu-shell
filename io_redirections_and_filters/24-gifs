@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name '*.gif' -print0 | sort -z -f | while IFS= read -r -d '' file $'\n' do echo "${file%.*}" $'\n' done 
+find . -type f -name "*.gif" -printf "%f\n" | rev | cut -d '.' -f 2- | rev | LC_ALL=C sort -f
